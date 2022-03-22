@@ -1,5 +1,5 @@
-import type { LinksFunction, MetaFunction } from 'remix';
-import { Links, LiveReload, Meta, Outlet, Scripts, ScrollRestoration } from 'remix';
+import type { LinksFunction, LoaderFunction, MetaFunction } from 'remix';
+import { Links, LiveReload, Meta, Outlet, Scripts, ScrollRestoration, useLoaderData } from 'remix';
 
 import styles from '~/styles/styles.css';
 
@@ -11,7 +11,19 @@ export const meta: MetaFunction = () => ({
   viewport: 'width=device-width,initial-scale=1',
 });
 
+type LoaderData = { ENV: Record<string, string> };
+
+export const loader: LoaderFunction = () => ({
+  ENV: {
+    CONVERT_KIT_API_URL: process.env.CONVERT_KIT_API_URL,
+    CONVERT_KIT_API_KEY: process.env.CONVERT_KIT_API_KEY,
+    CONVERT_KIT_API_FORM_ID: process.env.CONVERT_KIT_API_FORM_ID,
+  },
+});
+
 export default function App() {
+  const { ENV } = useLoaderData<LoaderData>();
+
   return (
     <html lang="en">
       <head>
@@ -21,6 +33,7 @@ export default function App() {
       <body>
         <Outlet />
         <ScrollRestoration />
+        <script dangerouslySetInnerHTML={{ __html: `window.ENV = ${JSON.stringify(ENV)}` }} />
         <Scripts />
         <LiveReload />
       </body>

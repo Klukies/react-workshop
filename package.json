@@ -7,7 +7,7 @@
   "scripts": {
     "build": "remix build",
     "dev": "remix build && run-p dev:*",
-    "dev:node": "cross-env NODE_ENV=development nodemon ./build/index.js --watch ./build/index.js",
+    "dev:node": "cross-env NODE_ENV=development nodemon -r dotenv/config ./build/index.js --watch ./build/index.js",
     "dev:remix": "remix watch",
     "dev:css": "postcss styles --base styles --dir app/styles -w",
     "lint": "eslint 'app/**/*.{js,jsx,ts,tsx}' --fix",
