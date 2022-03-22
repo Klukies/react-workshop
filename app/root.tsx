@@ -1,5 +1,9 @@
-import type { MetaFunction } from 'remix';
+import type { LinksFunction, MetaFunction } from 'remix';
 import { Links, LiveReload, Meta, Outlet, Scripts, ScrollRestoration } from 'remix';
+
+import styles from '~/styles/styles.css';
+
+export const links: LinksFunction = () => [{ rel: 'stylesheet', href: styles }];
 
 export const meta: MetaFunction = () => ({
   charset: 'utf-8',

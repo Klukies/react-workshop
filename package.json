@@ -11,6 +11,7 @@
     "dev:remix": "remix watch",
     "dev:css": "postcss styles --base styles --dir app/styles -w",
     "lint": "eslint 'app/**/*.{js,jsx,ts,tsx}' --fix",
+    "stylelint": "stylelint 'styles/**/*.{css,scss,sass}' --fix",
     "postinstall": "remix setup node",
     "prettier": "prettier 'app/**/*' --write",
     "start": "cross-env NODE_ENV=production node ./build/index.js"
@@ -41,6 +42,11 @@
     "postcss": "^8.4.12",
     "postcss-cli": "^9.1.0",
     "prettier": "^2.6.0",
+    "stylelint": "^14.6.0",
+    "stylelint-config-css-modules": "^4.1.0",
+    "stylelint-config-idiomatic-order": "^8.1.0",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-standard": "^25.0.0",
     "typescript": "^4.5.5"
   },
   "engines": {
