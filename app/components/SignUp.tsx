@@ -10,6 +10,7 @@ const SignUp = ({ ...formProps }: Props) => {
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
+    console.log(window.ENV.CONVERT_KIT_API_KEY);
   };
 
   return (

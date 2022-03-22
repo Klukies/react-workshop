@@ -37,8 +37,8 @@ export default function App() {
       </head>
       <body>
         <Outlet />
-        <ScrollRestoration />
         <script dangerouslySetInnerHTML={{ __html: `window.ENV = ${JSON.stringify(ENV)}` }} />
+        <ScrollRestoration />
         <Scripts />
         <LiveReload />
       </body>
