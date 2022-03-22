@@ -1,10 +1,19 @@
-import type { HTMLProps } from 'react';
+import type { ChangeEvent, FormEvent, HTMLProps } from 'react';
+import { useState } from 'react';
 
 type Props = HTMLProps<HTMLFormElement>;
 
 const SignUp = ({ ...formProps }: Props) => {
+  const [email, setEmail] = useState<string>();
+
+  const handleEmailChange = (e: ChangeEvent<HTMLInputElement>) => setEmail(e.target.value);
+
+  const handleSubmit = (e: FormEvent) => {
+    e.preventDefault();
+  };
+
   return (
-    <form method="post" {...formProps}>
+    <form method="post" onSubmit={handleSubmit} {...formProps}>
       <h2>Subscribe!</h2>
       <p>Don't miss any of the action!</p>
       <fieldset>
@@ -13,6 +22,8 @@ const SignUp = ({ ...formProps }: Props) => {
           aria-describedby="error-message"
           type="email"
           name="email"
+          value={email}
+          onChange={handleEmailChange}
           placeholder="you@example.com"
         />
         <button type="submit">Subscribe</button>
