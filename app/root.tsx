@@ -11,7 +11,12 @@ export const meta: MetaFunction = () => ({
   viewport: 'width=device-width,initial-scale=1',
 });
 
-type LoaderData = { ENV: Record<string, string> };
+type LoaderData = {
+  ENV: Pick<
+    NodeJS.ProcessEnv,
+    'CONVERT_KIT_API_URL' | 'CONVERT_KIT_API_KEY' | 'CONVERT_KIT_API_FORM_ID'
+  >;
+};
 
 export const loader: LoaderFunction = () => ({
   ENV: {
