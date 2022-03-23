@@ -104,3 +104,22 @@ input field should be focused this time.
 
 When you've implemented this you're done with your first React app!
 Have a look at [ConvertKit](https://app.convertkit.com/subscribers?status=all) to see your subscribers!
+
+### 6) Bonus: Testing!
+
+We now have a working application, let's make sure that we write some tests for
+our components so that our components are working as intended and keep doing so.
+
+We want our tests to remain close to our components.  
+In order to do this, create a directory with the same name as your component
+and rename the file to index.tsx.  
+After this we can easily create a ComponentName.test.tsx file and import our component.
+
+In order to make your life a bit easier, I've created a working application,  
+with working test for the SuccessMessage on the `feat/6-testing` branch.
+Feel free to check out this branch, or just add your own test cases to your app.
+
+Quick tip: you can make use of [nock](https://github.com/nock/nock) to mock
+the fetch to ConvertKit.
+
+An example of a test can be found [here](/app/components/SuccessMessage/SuccessMessage.test.tsx).
