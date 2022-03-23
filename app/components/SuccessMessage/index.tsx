@@ -1,6 +1,6 @@
 import type { HTMLProps } from 'react';
 
-type Props = HTMLProps<HTMLDivElement> & {
+export type Props = HTMLProps<HTMLDivElement> & {
   onStartOver: () => void;
 };
 

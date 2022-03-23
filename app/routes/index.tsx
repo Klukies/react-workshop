@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
-import SignUp from '~/components/SignUp';
 import SuccessMessage from '~/components/SuccessMessage';
+import SignUp from '~/components/SignUp';
 
 const Index = () => {
   const [isSuccessful, setIsSuccessful] = useState(false);
