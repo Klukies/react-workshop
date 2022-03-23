@@ -123,3 +123,31 @@ Quick tip: you can make use of [nock](https://github.com/nock/nock) to mock
 the fetch to ConvertKit.
 
 An example of a test can be found [here](/app/components/SuccessMessage/SuccessMessage.test.tsx).
+
+### 7) Remix :cd:
+
+If you've managed to complete all the previous steps during this span of 50mins,
+You're really acquainted with React, TypeScript and testing already.
+
+This final step is really just to help you do some exploration into SSR,
+if you don't feel like doing this, no problem. You'll most certainly see this
+in another course or in your professional career, so no hard feelings.
+
+Remix is a framework that focusses on web fundamentals, meaning we try to
+move as much logic as we can to the server.  
+Thanks to some Remix magix, we can build beautiful applications AND make it more perfomant too.
+
+We're not going to do coding here, but have look right [here](https://github.com/remix-run/remix/blob/main/examples/newsletter-signup/app/routes/newsletter.tsx).  
+As you can see I took the example from Remix and based my workshop on it :D.
+
+There's some cool stuff going on here some of which is:
+
+- The fetch is done server side, meaning we don't expose our credentials on the server  
+  and don't require this code to be shipped to our users. Meaning we get a faster and more secure app!
+- Because we are hanging on the web fundamentals, we no longer have to handle the state  
+  of our input fields. Again causing for less JS, but also less coding work for us!
+- A small but still significant benefit of this is that our application will still  
+  function even if users don't have JS enabled. This means users are able to perform  
+  their actions faster and even in case something breaks. It will look less pretty,  
+  but the main goal for the user is to do something or find information, and if that  
+  means our application won't look as good all time that's ok.
