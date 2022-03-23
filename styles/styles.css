@@ -74,6 +74,7 @@ button {
   border-color: hsl(243deg 85% 63%);
   background: hsl(243deg 85% 73%);
   color: white;
+  cursor: pointer;
 }
 
 button:focus,
