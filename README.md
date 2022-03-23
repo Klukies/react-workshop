@@ -10,7 +10,9 @@ Documentation for both can find bellow.
 ## Getting started
 
 You can either clone this repository if you have [Node.js](https://nodejs.org/en/)
-installed or import the repository on [codesandbox](https://codesandbox.io/).
+installed or import the repository on [StackBlitz](https://stackblitz.com/github/LukasCornille/react-workshop).
+If you're working with StackBlitz, have a look at [the docs](https://developer.stackblitz.com/docs/platform/importing-projects/#import-from-github)
+so you know how to switch branches.
 
 Make sure to install the [React Developer Tools](https://www.google.com/search?channel=nrow5&client=firefox-b-d&q=react+dev+tools) aswell, this will help with debugging of your application!
 
