@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from 'react';
 
 import useConvertKitSubmission from '~/hooks/useConvertKitSubmission';
 
-type Props = HTMLProps<HTMLFormElement> & {
+export type Props = HTMLProps<HTMLFormElement> & {
   isStartingOver: boolean;
   setIsStartingOver: Dispatch<SetStateAction<boolean>>;
   onSubscription: () => void;
@@ -31,7 +31,7 @@ const SignUp = ({ isStartingOver, setIsStartingOver, onSubscription, ...formProp
   return (
     // https://github.com/typescript-eslint/typescript-eslint/issues/4650
     // eslint-disable-next-line @typescript-eslint/no-misused-promises
-    <form onSubmit={handleSubmit} {...formProps}>
+    <form name="newsletterForm" onSubmit={handleSubmit} {...formProps}>
       <h2>Subscribe!</h2>
       <p>Don't miss any of the action!</p>
       <fieldset>
